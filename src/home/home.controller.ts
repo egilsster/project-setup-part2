@@ -10,6 +10,7 @@ export class HomeCtrl {
     constructor(
         private $scope: IScope
     ) {
+        
     }
 }
 

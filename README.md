@@ -22,6 +22,10 @@ npm install
 npm start
 ```
 
+# Creating a component
+
+Create a new simple component to work with
+
 # Adding a library with webpack
 
 I am going to add the Angular Material library, lets install it (on the docs page, I 
@@ -83,10 +87,3 @@ Now the app loads properly again, lets add something simple to test angular boot
 
 Also create the isCollapsed variable in the controller, initialized as false
 
-# Creating a component
-
-TODO 
-
-# Unit testing
-
-TODO

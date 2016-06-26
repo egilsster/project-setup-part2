@@ -109,17 +109,17 @@ export class NavbarComponent implements IComponentOptions {
     template: string = `
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <md-button>{{ $ctrl.branding.name }}</md-button>
+                <md-button>{{ $ctrl.branding }}</md-button>
             </div>
         </md-toolbar>
     `;
     bindings: any = {
-        branding: '='
+        branding: '<'
     }
 }
 
 export class NavbarCtrl {
-    branding: any;
+    branding: string;
     
     constructor() { }
 }
@@ -130,8 +130,8 @@ different ways of setting this up.
 
 The bindings property is, so to speak, to send in parameters to the component. I will call
 this component `navbarComponent` which angular translates to `<navbar-component></navbar-component>`
-and with the bindings object I can send objects in using properties like so: `<navbar-component branding="{ 'name': 'Angular!' }"></navbar-component>`,
-now the controller has this object inside the branding class variable. There are different ways of binding,
+and with the bindings object I can send objects in using properties like so: `<navbar-component branding="'Angular!'"></navbar-component>`,
+now the controller has this string inside the branding class variable. There are different ways of binding,
 see here: https://docs.angularjs.org/guide/component
 
 This is how our index.ts looks like, its pretty similar to the home module but without routing and such:
@@ -161,7 +161,7 @@ Lets add this component to our root index.html file just above the ui-view div, 
 </head>
 
 <body>
-    <navbar-component branding="{ 'name': 'Angular!'}"></navbar-component>
+    <navbar-component branding="'Angular!'"></navbar-component>
     <div ui-view>
         <!-- Views get injected here -->
     </div>

@@ -7,17 +7,17 @@ export class NavbarComponent implements IComponentOptions {
     template: string = `
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <md-button>{{ $ctrl.branding.name }}</md-button>
+                <md-button>{{ $ctrl.branding }}</md-button>
             </div>
         </md-toolbar>
     `;
     bindings: any = {
-        branding: '='
+        branding: '<'
     }
 }
 
 export class NavbarCtrl {
-    branding: any;
+    branding: string;
     
     constructor() { }
 }

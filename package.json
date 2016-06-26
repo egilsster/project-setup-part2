@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egilsster/project-setup.git"
+    "url": "git+https://github.com/egilsster/project-setup-part2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/egilsster/project-setup/issues"
+    "url": "https://github.com/egilsster/project-setup-part2/issues"
   },
-  "homepage": "https://github.com/egilsster/project-setup#readme",
+  "homepage": "https://github.com/egilsster/project-setup-part2#readme",
   "dependencies": {
     "angular": "^1.5.7",
     "angular-animate": "^1.5.7",

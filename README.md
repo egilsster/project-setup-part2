@@ -92,8 +92,8 @@ Also create the isCollapsed variable in the controller, initialized as false
 
 # Creating a component
 
-To create a simple component, lets create a module that will contain them. I am going
-to create a navigation bar module using material design components.
+To create a simple component, lets create a module that will contain it (you can use a single module to host 
+logically related components). I am going to create a navigation bar module using material design components.
 
 Lets create another folder, call it navbar, make two files there, `index.ts` and `navbar.component.ts`.
 

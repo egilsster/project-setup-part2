@@ -51,7 +51,7 @@ This should give you a pretty button with material design.
 
 
 Lets add another one, Angular UI bootstrap. Extra deps are angular touch and bootstrap css, lets add those.
-(FYI: using two css framework in one project is not recommended, but this is for demo purposes)
+(FYI: using two css frameworks (material and bootstrap) in one project is not recommended, but this is for demo purposes)
 ```sh
 npm i -S angular-touch bootstrap angular-ui-bootstrap
 ```

@@ -13,14 +13,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-ui-bootstrap';
 
 import { routing } from './index.config';
-import { homeModule } from './Home';
-import { designModule } from './Design';
+import { homeModule } from './home';
+import { navbarModule } from './navbar';
 
 const requires: string[] = [
     'ui.bootstrap',
     String(router),
     material,
-    designModule,
+    navbarModule,
     homeModule
 ];
 

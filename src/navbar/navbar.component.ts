@@ -19,5 +19,8 @@ export class NavbarComponent implements IComponentOptions {
 export class NavbarCtrl {
     branding: string;
     
-    constructor() { }
+    constructor() {
+        console.log(typeof this.branding);
+        console.log(this.branding);
+    }
 }

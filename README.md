@@ -121,11 +121,13 @@ export class NavbarComponent implements IComponentOptions {
 export class NavbarCtrl {
     branding: string;
     
-    constructor() { }
+    constructor() {
+        console.log(this.branding);
+    }
 }
 ```
 
-The template can ofcourse be external and use the require syntax but this is to show you
+The template can of course be external and use the require syntax but this is to show you
 different ways of setting this up. 
 
 The bindings property is, so to speak, to send in parameters to the component. I will call

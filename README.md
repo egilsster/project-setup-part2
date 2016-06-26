@@ -12,7 +12,7 @@ npm install -g webpack typescript typings
 Whenever I run npm install, I also want to install the typings, so
 we can add a script that runs after install, which is called postinstall.
 Lets add this script to the package.json script property:
-```sh
+```json
 "postinstall": "typings install"
 ```
 
@@ -51,6 +51,7 @@ This should give you a pretty button with material design.
 
 
 Lets add another one, Angular UI bootstrap. Extra deps are angular touch and bootstrap css, lets add those.
+(FYI: using two css framework in one project is not recommended, but this is for demo purposes)
 ```sh
 npm i -S angular-touch bootstrap angular-ui-bootstrap
 ```

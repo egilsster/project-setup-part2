@@ -5,18 +5,13 @@
 Download and install Node.js from https://nodejs.org/en/download/
 
 These packages are required globally.
-```sh
-npm install -g webpack typescript typings
-```
 
-Whenever I run npm install, I also want to install the typings, so
-we can add a script that runs after install, which is called postinstall.
-Lets add this script to the package.json script property:
-```json
-"postinstall": "typings install"
+```sh
+npm install -g webpack typescript
 ```
 
 Lets make sure the app is functional by running these commands
+
 ```sh
 npm install
 npm start
@@ -26,12 +21,14 @@ npm start
 
 I am going to add the Angular Material library, lets install it (on the docs page, I 
 see they add angular-messages as well, so lets install that too):
+
 ```sh
 npm install -S angular-material angular-messages
-typings install dt~angular-material -SG
+npm install -D @types/angular-material
 ```
 
 We need to add the needed files as per ngMaterial docs, lets add the following to our main index:
+
 ```typescript
 import * as material from 'angular-material';
 import 'angular-messages';
@@ -52,24 +49,28 @@ This should give you a pretty button with material design.
 
 Lets add another one, Angular UI bootstrap. Extra deps are angular touch and bootstrap css, lets add those.
 (FYI: using two css frameworks (material and bootstrap) in one project is not recommended, but this is for demo purposes)
+
 ```sh
 npm i -S angular-touch bootstrap angular-ui-bootstrap
 ```
 
 Add the needed stuff to our index (remember to add 'ui.bootstrap') to requires:
-```sh
+
+```typescript
 import 'angular-touch';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-ui-bootstrap';
 ```
 
 I need to add these loaders so bootstrap can load its fonts and such:
+
 ```sh
 npm i -D url-loader file-loader
 ```
 
 And webpack config:
-```sh
+
+```javascript
 {
     test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
     loader: 'url-loader?limit=10000&mimetype=application/font-woff'
@@ -101,8 +102,6 @@ Lets create another folder, call it navbar, make two files there, `index.ts` and
 This is how our component file looks like:
 
 ```typescript
-'use strict';
-
 import { IComponentOptions } from 'angular';
 
 export class NavbarComponent implements IComponentOptions {
@@ -140,8 +139,6 @@ see here: https://docs.angularjs.org/guide/component
 This is how our index.ts looks like, its pretty similar to the home module but without routing and such:
 
 ```typescript
-'use strict';
-
 import * as angular from 'angular';
 import { NavbarComponent } from './navbar.component';
 

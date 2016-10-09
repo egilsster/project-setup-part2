@@ -1,9 +1,7 @@
-'use strict';
-
 import { IComponentOptions } from 'angular';
 
 export class NavbarComponent implements IComponentOptions {
-    controller: Function = NavbarCtrl
+    controller = NavbarCtrl
     template: string = `
         <md-toolbar>
             <div class="md-toolbar-tools">
@@ -11,14 +9,14 @@ export class NavbarComponent implements IComponentOptions {
             </div>
         </md-toolbar>
     `;
-    bindings: any = {
+    bindings = {
         branding: '<'
     }
 }
 
 export class NavbarCtrl {
     branding: string;
-    
+
     constructor() {
         console.log(typeof this.branding);
         console.log(this.branding);

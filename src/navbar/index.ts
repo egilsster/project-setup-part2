@@ -1,5 +1,3 @@
-'use strict';
-
 import * as angular from 'angular';
 import { NavbarComponent } from './navbar.component';
 
